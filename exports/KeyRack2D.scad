@@ -1,0 +1,3 @@
+include <../KeyRack.scad>
+
+KeyRack();
