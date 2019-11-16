@@ -2,7 +2,7 @@ $fn = 64;
 
 DEFAULT_SIZE = [250, 100];
 DEFAULT_SCREW_HOLD_RADIUS = 1;
-DEFAULT_THICKNESS = 6.4;
+DEFAULT_THICKNESS = 6.4; // https://make.ponoko.com/materials/walnut-hardwood
 
 module KeyRack(
     size = DEFAULT_SIZE,
