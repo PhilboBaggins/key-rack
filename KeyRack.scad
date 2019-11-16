@@ -3,11 +3,14 @@ $fn = 64;
 DEFAULT_SIZE = [250, 100];
 DEFAULT_SCREW_HOLD_RADIUS = 1;
 DEFAULT_THICKNESS = 6.4; // https://make.ponoko.com/materials/walnut-hardwood
+DEFAULT_COLOUR = "Sienna";
 
 module KeyRack(
     size = DEFAULT_SIZE,
-    screwHoleRadius = DEFAULT_SCREW_HOLD_RADIUS)
+    screwHoleRadius = DEFAULT_SCREW_HOLD_RADIUS,
+    colour = DEFAULT_COLOUR)
 {
+    color(colour)
     difference()
     {
         // Main shape
@@ -34,8 +37,10 @@ module KeyRack(
 module KeyRack3D(
     size = DEFAULT_SIZE,
     screwHoleRadius = DEFAULT_SCREW_HOLD_RADIUS,
-    thickness = DEFAULT_THICKNESS)
+    thickness = DEFAULT_THICKNESS,
+    colour = DEFAULT_COLOUR)
 {
+    color(colour)
     linear_extrude(thickness)
     KeyRack(size, screwHoleRadius);
 }
