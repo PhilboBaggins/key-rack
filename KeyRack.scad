@@ -1,13 +1,13 @@
 $fn = 64;
 
 DEFAULT_SIZE = [250, 100];
-DEFAULT_SCREW_HOLD_RADIUS = 3.3 / 4; // Half radius of screw, so it will go in easy but also leave a lot of material to make contact with the screw threads
+DEFAULT_SCREW_HOLE_RADIUS = 3.3 / 4; // Half radius of screw, so it will go in easy but also leave a lot of material to make contact with the screw threads
 DEFAULT_THICKNESS = 6.4; // https://make.ponoko.com/materials/walnut-hardwood
 DEFAULT_COLOUR = "Sienna";
 
 module KeyRack(
     size = DEFAULT_SIZE,
-    screwHoleRadius = DEFAULT_SCREW_HOLD_RADIUS,
+    screwHoleRadius = DEFAULT_SCREW_HOLE_RADIUS,
     colour = DEFAULT_COLOUR)
 {
     color(colour)
@@ -36,7 +36,7 @@ module KeyRack(
 
 module KeyRack3D(
     size = DEFAULT_SIZE,
-    screwHoleRadius = DEFAULT_SCREW_HOLD_RADIUS,
+    screwHoleRadius = DEFAULT_SCREW_HOLE_RADIUS,
     thickness = DEFAULT_THICKNESS,
     colour = DEFAULT_COLOUR)
 {
