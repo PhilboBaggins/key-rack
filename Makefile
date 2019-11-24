@@ -1,22 +1,21 @@
 NAME := KeyRack
 
-ALL := \
-	exports/${NAME}.stl \
+ALL_2D := \
 	exports/${NAME}.dxf \
 	exports/${NAME}.svg
 
+ALL_3D := \
+	exports/${NAME}.stl
+
 .PHONY: all clean
 
-all: ${ALL}
+all: ${ALL_2D} ${ALL_3D}
 
-exports/${NAME}.stl: exports/${NAME}3D.scad ${NAME}.scad
+${ALL_2D}: exports/${NAME}2D.scad ${NAME}.scad
 	openscad -o $@ $<
 
-exports/${NAME}.dxf: exports/${NAME}2D.scad ${NAME}.scad
-	openscad -o $@ $<
-
-exports/${NAME}.svg: exports/${NAME}2D.scad ${NAME}.scad
+${ALL_3D}: exports/${NAME}3D.scad ${NAME}.scad
 	openscad -o $@ $<
 
 clean:
-	rm -f ${ALL}
+	rm -f ${ALL_2D} ${ALL_3D}
