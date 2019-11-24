@@ -5,7 +5,8 @@ ALL_2D := \
 	exports/${NAME}.svg
 
 ALL_3D := \
-	exports/${NAME}.stl
+	exports/${NAME}.stl \
+	exports/${NAME}.png
 
 .PHONY: all clean
 
